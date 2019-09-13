@@ -20,6 +20,19 @@ First lets start by :
           ```
 
   * Creating the default route 
+  	- Now lets add a default route that will send information about our API when real request is sent 
+	- [Go lang net/http package documentation](https://golang.org/pkg/net/http/)
+	- ***err := http.ListenandServe('string := url',handler)*** which is going to start server and listen 
+	- create a root handler to receive http requests at mentioned URL and serve the response
+	- ***http.HandleFunc("/", rootHandler)***
+	  ```Go
+	     http.HandleFunc("/", rootHandler)
+	     
+	     func rootHandler(w http.ResponseWriter, r *http.Request) {
+	      w.WriteHeader(http.StatusOK)
+	      w.Write([]byte("Go Lang Rest service \n"))
+             }
+	  ```  
   * Sending a message via default route
   * Creating a custom error message
   * Using Postman to test APIs
