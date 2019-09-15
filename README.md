@@ -57,5 +57,6 @@ First lets start by :
 			w.Write([]byte("Go Lang Rest service \n"))
 		}
 	  ```
-  * Using Postman to test APIs
+  * Using Postman to test APIs<br>
+  	Above steps complete to develop a simple GET request using Go lang ::smile::
   
