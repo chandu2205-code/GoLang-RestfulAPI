@@ -111,5 +111,6 @@ First lets start by :
 				Role string        `json:"role"`
 			}
 		```
-* 		
+* Record Manipulation : In the above user.go file add all methods which handles CRUD operation on User
+* Defining custom handler : 
   
