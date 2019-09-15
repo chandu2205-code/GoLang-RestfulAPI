@@ -113,4 +113,10 @@ First lets start by :
 		```
 * Record Manipulation : In the above user.go file add all methods which handles CRUD operation on User
 * Defining custom handler : 
+	- Common route - /users route
+	- Algorithm :
+		* Recognize the /users route
+		* Parse the URL and method to call a proper handler
+		* Retrieve or process data 
+		* send the reposnse
   
