@@ -34,6 +34,28 @@ First lets start by :
              }
 	  ```  
   * Sending a message via default route
+  	- In the above code snippet [Creating the default route] the message is sent via default route ("/")
   * Creating a custom error message
+  	- By default above piece of code , for any incoming request sends messages via default route . In order to  avoid it
+	  let's create custom error message .
+	  ```Go
+	  	/*
+		*Method name here starts with small letter 'r'
+		*which makes function 'rootHandler' private which is
+		*visible only in this package
+		*@param writer which is a response writer
+		*@param reader which is a pointer to http.Request
+ 		*/
+		func rootHandler(w http.ResponseWriter, r *http.Request) {
+
+			if r.URL.Path != "/" {
+			w.WriteHeader(http.StatusNotFound)
+			w.Write([]byte("Asset not found"))
+			return
+			}
+			w.WriteHeader(http.StatusOK)
+			w.Write([]byte("Go Lang Rest service \n"))
+		}
+	  ```
   * Using Postman to test APIs
   
